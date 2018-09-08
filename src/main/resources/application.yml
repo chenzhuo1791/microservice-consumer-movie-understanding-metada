@@ -1,0 +1,21 @@
+server:
+  port: 8010
+  servlet:
+    context-path: /
+
+logging:
+  level:
+    root : INFO
+
+spring:
+  application:
+    name: microservice-consumer-movie
+
+eureka:
+  client:
+    eureka-server-u-r-l-context:  http://127.0.0.1:8761/eureka
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+        my-metadata : 消费端-自定义数据
+        otherData : consumer-part
